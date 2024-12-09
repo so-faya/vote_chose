@@ -1,0 +1,147 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #f5f5f5;
+  font-family: Arial, sans-serif;
+}
+/* Centering Content */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.app {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.image {
+  max-width: 300px;
+  margin: 20px 0;
+}
+
+.question {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  
+}
+
+/* Gradient Box */
+.gradient-box {
+  width: 400px; /* Increased width */
+  height: 300px; /* Increased height */
+  background: linear-gradient(
+    to right,
+    rgba(255, 0, 0, 0.5), /* Red for False */
+    rgba(255, 255, 0, 0.5), /* Yellow for Not Sure */
+    rgba(0, 255, 0, 0.5) /* Green for True */
+  );
+  position: relative;
+  border-radius: 10px;
+  border: 2px solid #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dot {
+  width: 20px;
+  height: 20px;
+  background: radial-gradient(circle at 30% 30%, #000000, #111111, #1c1c1c, #222222);
+  border-radius: 50%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-style: preserve-3d;
+  box-shadow: 
+    2px 2px 4px rgba(0, 0, 0, 0.5), /* Outer shadow for depth */
+    inset -2px -2px 5px rgba(255, 255, 255, 0.1), /* Highlight effect */
+    inset 2px 2px 5px rgba(0, 0, 0, 0.5); /* Inner shadow for depth */
+  color: white;
+  font-size: 0.8rem;
+}
+
+.result-btn {
+  padding: 10px 20px;
+  background-color: blue;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin: 10px;
+  font-size: 15px;
+}
+
+/* Result Box Styling */
+.result-box {
+  width: 500px;
+  height: 300px;
+  border: 2px solid #ccc;
+  background-color: #f9f9f9;
+  margin-top: 20px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1000px;
+  position: relative;
+  margin-bottom: 100px;
+}
+/* Placeholder Sections */
+.placeholder-section {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  width: 33.33%; /* Divide into three equal parts */
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.false-section {
+  left: 0; /* Align to the left */
+  border-right: 1px solid #ccc; /* Divider between sections */
+}
+
+.not-sure-section {
+  left: 33.33%; /* Center section */
+  border-right: 1px solid #ccc; /* Divider between sections */
+}
+
+.true-section {
+  right: 0; /* Align to the right */
+}
+
+.result-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  perspective: 1000px;
+}
+
+
+/* Result Dots */
+.result-dot {
+  width: 20px;
+  height: 20px;
+  background: radial-gradient(circle at 30% 30%, #000000, #2b2b2b, #555555);
+  border-radius: 50%;
+  position: absolute;
+  transform-style: preserve-3d;
+  box-shadow: 
+    2px 4px 6px rgba(0, 0, 0, 0.6),
+    inset -4px -4px 8px rgba(255, 255, 255, 0.3),
+    inset 2px 2px 6px rgba(0, 0, 0, 0.5);
+}
