@@ -17,7 +17,6 @@
 .login-form {
   display: flex;
   justify-content: center;
-
 }
 .form-container{
   background: rgba(255, 255, 255, 0.9);
@@ -25,6 +24,7 @@
   border-radius: 8px;
   padding: 20px;
   flex-basis: 40%;
+  
 }
 .login-form h2 {
   margin: 0 0 20px;
@@ -34,9 +34,10 @@ form{
   display: flex;
   justify-content: center;
   flex-direction: column;
+  flex-basis: 100%;
 }
 .login-form input {
-  min-width: 90%;
+  flex-basis: 90%;
   padding: 20px;
   margin: 15px 0;
   border: 1px solid #ccc;
