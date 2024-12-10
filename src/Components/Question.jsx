@@ -1,7 +1,16 @@
 import React from "react";
 
-function Question() {
-  return <h1>Interactive Gradient Box</h1>;
-}
+const Question = () => {
+  return (
+    <div className="question">
+      <h2>The Image is colorful?</h2>
+      <p>
+        (Drag the dot to "Right" if true, "Left" if false, or "Center" if not sure!)
+        
+      </p>
+    </div>
+  );
+};
 
 export default Question;
+
